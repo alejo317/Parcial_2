@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th class="h1">#</th>
+            <th class="h1">Nombre</th>
+            <th class="h1">Nombre Cientifico</th>
+            <th class="h1">Alimentacion</th>
+            <th class="h1">Distribucion Mundial</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of pinguinos" (click)="onSelected(c)">
+            <td><dd>{{ c.id }}</dd></td>
+            <td><dd>{{ c.name }}</dd></td>
+            <td><dd>{{ c.scientific_name }}</dd></td>
+            <td><dd>{{ c.feeding }}</dd></td>
+            <td><dd>{{ c.global_distribution }}</dd></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>La especie con mayor distribucion mundial es: {{ mayorDistribucion(pinguinos) }}</p>
+    </div>
+    <div class="col">
+      <div *ngIf="selectedPinguino">
+        <app-pinguino-detail [pinguinoDetail]="selectedPinguino"></app-pinguino-detail>
+      </div>
+      <hr/>
+    </div>
+  </div>
+</div>

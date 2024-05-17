@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{ pinguinoDetail.name }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ pinguinoDetail.image }}"
+          alt="{{ pinguinoDetail.name }}"
+        />
+      </div>
+    </div>
+    <div class="col-5">
+      <dl>
+        <dt>Description</dt>
+        <dd>{{ pinguinoDetail.description }}</dd>
+        <hr />
+      </dl>
+    </div>
+  </div>
+ </div>
